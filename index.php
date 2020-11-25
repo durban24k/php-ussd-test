@@ -18,7 +18,7 @@ if($text==""){
      $response="END Your phone number is ".$phoneNumber;
 }elseif($text=="1*1"){
      $accNo="AC1101";
-     $response="END Your account number is ".$accNO;
+     $response="END Your account number is ".$accNo;
 }elseif($text=="1*2"){
      $balance="KES 1.00";
      $response="END Your balance is ".$balance;
