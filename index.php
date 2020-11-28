@@ -7,7 +7,7 @@ $phoneNumber=$_POST['phoneNumber'];
 $text=$_POST['text'];
 
 $textArray=explode('*',$text);
-$ArrayLen=count($textArray);
+$arrayLen=count($textArray);
 
 if(empty($textArray)){
      $response="CON What would you want to check \n";
@@ -19,10 +19,10 @@ if(empty($textArray)){
      $response.="2. Account Balance";
 }elseif($textArray[0]=="2"){
      $response="END Your phone number is ".$phoneNumber;
-}elseif($textArray[1]=="1"){
+}elseif($textArray[1]=="1" && $arrayLen==2){
      $accNo="AC1101";
      $response="END Your account number is ".$accNo;
-}elseif($textArray[1]=="2"){
+}elseif($textArray[1]=="2" && $arrayLen==2){
      $balance="KES 1.00";
      $response="END Your balance is ".$balance;
 }
