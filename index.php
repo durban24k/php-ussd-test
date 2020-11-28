@@ -13,16 +13,16 @@ if($text==""){
      $response="CON What would you want to check \n";
      $response.="1. Account Info\n";
      $response.="2. Phone number";
-}elseif($textArray[0]=="1"){
+}elseif($text=="1"){
      $response="CON Choose an option you want to view\n";
      $response.="1. Account No\n";
      $response.="2. Account Balance";
-}elseif($textArray[0]=="2"){
+}elseif($text=="2"){
      $response="END Your phone number is ".$phoneNumber;
-}elseif($textArray[0]=="1" && $textArray[1]=="1"){
+}elseif($text=="1*1"){
      $accNo="AC1101";
      $response="END Your account number is ".$accNo;
-}elseif($textArray[0]=="1" && $textArray[1]=="2"){
+}elseif($text=="1*2"){
      $balance="KES 1.00";
      $response="END Your balance is ".$balance;
 }
