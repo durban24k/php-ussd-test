@@ -19,10 +19,10 @@ if($text==""){
      $response.="2. Account Balance";
 }elseif($textArray[0]=="2"){
      $response="END Your phone number is ".$phoneNumber;
-}elseif($textArray[1]=="1" && $arrayLen==2){
+}elseif($textArray[0]=="1" && $textArray[1]=="1"){
      $accNo="AC1101";
      $response="END Your account number is ".$accNo;
-}elseif($textArray[1]=="2" && $arrayLen==2){
+}elseif($textArray[0]=="1" && $textArray[1]=="2"){
      $balance="KES 1.00";
      $response="END Your balance is ".$balance;
 }
