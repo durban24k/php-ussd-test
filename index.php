@@ -9,7 +9,7 @@ $text=$_POST['text'];
 $textArray=explode('*',$text);
 $arrayLen=count($textArray);
 
-if(empty($textArray)){
+if($text==""){
      $response="CON What would you want to check \n";
      $response.="1. Account Info\n";
      $response.="2. Phone number";
