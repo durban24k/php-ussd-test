@@ -8,7 +8,7 @@
      $level = explode("*", $text);
      if ($text=="") {
           $response="CON Welcome to the registration portal.\nPlease enter you full name";
-     }else if($level!=""){
+     }else{
           $response="END Confirm that this is your information\n";
           $response.="Name:".$level[0]."\n";
           $response.="Phone Number:".$phoneNumber;
