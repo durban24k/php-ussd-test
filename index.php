@@ -9,7 +9,7 @@
      if ($text=="") {
           $response="CON Welcome to the registration portal.\nPlease enter you full name";
      }
-     if(isset($level[0]) && $level[0]!="" && !isset($level[1])){
+     else if(isset($level[0]) && $level[0]!="" && !isset($level[1])){
           $response="CON Hi ".$level[0].", enter your ward name";   
      }
      else if(isset($level[1]) && $level[1]!="" && !isset($level[2])){
