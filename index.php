@@ -5,9 +5,8 @@
      $phonenumber=$_POST['MSISDN'];
      $serviceCode=$_POST['serviceCode'];
 
-     $level = explode("*", $text);
      if (isset($text)) {
-
+          $level = explode("*", $text);
           if ($text=="") {
                $response="CON Welcome to the registration portal.\nPlease enter you full name";
           }
