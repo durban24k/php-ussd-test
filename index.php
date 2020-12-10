@@ -1,22 +1,27 @@
 <?php
-        #We obtain the data which is contained in the post url on our server.
+     include_once './functions/register.php';
 
-     $text=$_POST['USSD_STRING'];
-     $phonenumber=$_POST['MSISDN'];
+     $session=$_POST['sessionId'];
      $serviceCode=$_POST['serviceCode'];
+     $phoneNumber=$_POST['phoneNumber'];
+     $text=$_POST['text'];
 
-     $level = explode("*", $text);
+     $txt=explode('*',$text);
+     $arrayLen=0;
+     $arrayLen=count($txt);
+
      if($text==""){
-          $response="CON Welcome to the registration portal.\nPlease enter you full name";
-     }elseif($text!=""){
-          $response="END Confirm that this is your information\n";
-          $response.="Name:".$level[0]."\n";
-          $response.="Phone Number:".$phoneNumber;
+          $response="CON Welcome to TeleHealth Services:\n";
+          $response.="1. Login\n";
+          $response.="2. Setup Profile";
+     }elseif($text=="1"){
+          $response="CON Enter Your PIN CODE:\n";
+          // function to authenticate the secret code
+     }elseif($text=="2"){
+          // function to set up the profile
      }
 
-     header('Content-type: text/plain');
+     header('Content-type:text/plain');
      echo $response;
-
-
 
 ?>
