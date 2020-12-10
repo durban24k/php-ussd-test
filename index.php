@@ -11,11 +11,11 @@
      $arrayLen=count($txt);
 
      if($text==""){
-          $response="CON Welcome to TeleHealth Services:\n";
+          $response="CON Welcome to Services:\n";
           $response.="1. Login\n";
           $response.="2. Setup Profile";
      }elseif($text=="1"){
-          $response="CON Enter Your PIN CODE:\n";
+          $response=regUser();
           // function to authenticate the secret code
      }elseif($text=="2"){
           // function to set up the profile
